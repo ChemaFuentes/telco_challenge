@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+        airflow:
+                build:
+                        context: .
+                        dockerfile: airflow-dev/Dockerfile
+                image: telco-challenge-airflow:dev
+                restart: always
+                environment:
+                        - AIRFLOW__CORE__LOAD_EXAMPLES=False
+                volumes:
+                        - .:/root/airflow/dags
+                ports:
+                        - "8080:8080"
