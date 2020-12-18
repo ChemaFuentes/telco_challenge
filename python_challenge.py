@@ -28,3 +28,9 @@ puesto = 'Data Engineer'
 departamento = 'IT'
 persona_2 = Trabajador(nombre, 38, departamento, puesto)
 persona_2.presentation()
+
+"""
+La variable nombre es una variable de alcance global definida en el cuerpo del programa.
+La variable self.nombre es una propiedad o variable asociada a un objeto o clase. Esta variable solo existe asociada
+a una instancia de un objeto de la clase Persona (o Trabajador, que hereda de la misma) 
+"""
