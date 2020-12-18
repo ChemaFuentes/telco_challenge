@@ -37,3 +37,7 @@ a una instancia de un objeto de la clase Persona (o Trabajador, que hereda de la
 
 persona_3 = Trabajador(nombre, 38)
 persona_3.presentation()
+
+my_var_list = ['Andrea', 42, 'Ventas', 'Manager']
+trabajador_2 = Trabajador(*my_var_list)
+trabajador_2.presentation()
