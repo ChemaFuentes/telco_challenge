@@ -8,7 +8,7 @@ class Persona:
 
 
 class Trabajador(Persona):
-    def __init__(self, nombre, edad, departamento, puesto):
+    def __init__(self, nombre, edad, departamento = 'Data', puesto = 'Analyst'):
         Persona.__init__(self, nombre, edad)
 
         self.departamento = departamento
@@ -34,3 +34,6 @@ La variable nombre es una variable de alcance global definida en el cuerpo del p
 La variable self.nombre es una propiedad o variable asociada a un objeto o clase. Esta variable solo existe asociada
 a una instancia de un objeto de la clase Persona (o Trabajador, que hereda de la misma) 
 """
+
+persona_3 = Trabajador(nombre, 38)
+persona_3.presentation()
