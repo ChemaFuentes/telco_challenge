@@ -53,3 +53,9 @@ dag_3 = DAG(
 )
 
 time_diff = TimeDiff(diff_date=date(2020, 1, 1), task_id='diff_date', dag=dag_3)
+
+"""
+Los Hooks son interfaces que permiten a los operadores de airflow interaccionar con sistemas externos (plataformas 
+cloud, bases de datos, etc). Una conexión es un enlace concreto a un sistema externo concreto. Un Hook puede contener
+una o más conexiones que le ayudaran a implementar los métodos que proporcione. 
+"""
