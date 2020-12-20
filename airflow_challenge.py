@@ -1,7 +1,9 @@
 from airflow import DAG
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 from airflow.operators.dummy_operator import DummyOperator
+
+from operators.time_diff_operator import TimeDiff
 
 _SCHEDULE_INTERVAL = '0 3 * * *'
 
@@ -43,3 +45,11 @@ tasks_impares = tasks[0::2]
 for task in tasks_pares:
     tasks_impares >> task
 
+dag_3 = DAG(
+    'ejercicios-airflow-4',
+    default_args=default_args,
+    description='DAG de ejercicios de airflow: TimeDiff',
+    schedule_interval=_SCHEDULE_INTERVAL,
+)
+
+time_diff = TimeDiff(diff_date=date(2020, 1, 1), task_id='diff_date', dag=dag_3)
